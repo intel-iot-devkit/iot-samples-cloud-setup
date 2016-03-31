@@ -50,7 +50,7 @@ You can use ***curl*** to create a new device for your Azure IoT Hub using the S
 ```
 $ curl -i -X PUT -H "Content-Type: application/json" -H "Authorization: <Your SharedAccessSignature>" -d "{deviceId: \"edison1\"}" https://<Your IoT Hub Name>.azure-devices.net/devices/edison1?api-version=2016-02-03
 ```
-If you are using Windows* you may need to install Cygwin* in order to use curl. 
+If you are using Windows* you may need to install [Cygwin*](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/feature/image-link/installing-cygwin.md) in order to use curl. 
 
 You should receive a response like this:
 
