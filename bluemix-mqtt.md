@@ -37,4 +37,14 @@
 
 ## Additional setup for C++
 
+When running the code on the Edison, you need to set the following "Commands to execute before application":
+
+```
+chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://???:8883"; export MQTT_CLIENTID="???"; export MQTT_USERNAME="???"; export MQTT_PASSWORD="???"; export MQTT_TOPIC="???"
+```
+
+Click on the "Apply" button to save these settings.
+
+Click on the "Run" button to run the code on the Edison.
+
 ## Additional setup for JavaScript

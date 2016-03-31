@@ -110,4 +110,14 @@ Note that you must change `USERNAME@xxx.xxx.x.xxx` to match whatever username an
 
 ## Additional setup for C++
 
+When running the code on the Edison, you need to set the following "Commands to execute before application":
+
+```
+chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://A1QBI9OBPG6VY7.iot.us-west-2.amazonaws.com:8883"; export MQTT_CLIENTID="edison1"; export MQTT_CERT="/home/root/.ssh/cert.pem"; export MQTT_KEY="/home/root/.ssh/privateKey.pem"; export MQTT_CA="/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem"; export MQTT_TOPIC="devices/edison1"
+```
+
+Click on the "Apply" button to save these settings.
+
+Click on the "Run" button to run the code on the Edison.
+
 ## Additional setup for JavaScript
