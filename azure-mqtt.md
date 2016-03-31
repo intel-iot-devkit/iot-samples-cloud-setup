@@ -29,6 +29,8 @@ SharedAccessSignature sr=<Your IoT Hub Name>.azure-devices.net%2Fdevices&sig=<Su
 
 This SAS token will last for 1440 minutes before you will need to obtain a new one. It should be used only for administrative functions such as creating new devices. Each device will also need its own SAS token, which we will create in a subsequent step.
 
+You can find the `sastoken` program under `support\azure`. Precompiled binaries for Windows, OSX, and Linux can be found in the `support\azure\build` folder.
+
 ## Create new device
 
 You can use ***curl*** to create a new device for your Azure IoT Hub using the SAS token with ***registryReadWrite*** access as obtained above. For example, to create a new device named "edison1":
@@ -86,6 +88,20 @@ SharedAccessSignature sr=<Your IoT Hub Name>.azure-devices.net%2Fdevices%2F<Your
 ```
 
 This SAS token will last for 1440 minutes before you will need to obtain a new one. It should be used only for the specific device for which it was created. In other words, each device that you wish to connect will need its own SAS token.
+
+## Summary of information
+
+If you have followed all the steps outlined above, you now should have all of the information you will need to provide to your program so it can connect to the MQTT server:
+
+MQTT_SERVER use "<Your IoT Hub Name>.azure-devices.net".
+
+MQTT_CLIENTID use "<Your device name>".
+
+MQTT_TOPIC use "devices/<Your device name>/messages/events/"
+
+MQTT_USERNAME use "<Your IoT Hub Name>/<Your device name>".
+
+MQTT_PASSWORD use the string with your device's SAS token.
 
 ## Additional setup for C++
 
