@@ -3,7 +3,7 @@
 ## MS Azure Initial Setup
 
 - Create an account on Microsoft Azure, if you do not yet have one.
-![](images/azure/create-free-account.png)
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/tree/feature/add-azure-images/images/azurecreate-free-account.png)
 - Login to your Microsoft Azure account.
 - Create a new IoT Hub by clicking on the "New" link on your Dashboard. Click on the "Internet of Things" links, then click on the "Azure IoT Hub" link.
 - Enter the information for your new Azure IoT Hub, then click on the "Create" button.
