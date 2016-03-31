@@ -29,6 +29,8 @@ Once your Azure IoT Hub has been created, you need to obtain a SharedAccessSigna
 ```
 sastoken <Your IoT Hub Name>.azure-devices.net/devices/ <Your primary key> 1440 registryReadWrite
 ```
+For this to work you must be in the directory where you downloaded/cloned this example to. 
+Ex (C:\Users\me\Documents\GitHub\intel-iot-examples-mqtt\support\azure\build\windows)
 
 The program will output your SAS token as a string like this:
 
@@ -48,6 +50,7 @@ You can use ***curl*** to create a new device for your Azure IoT Hub using the S
 ```
 $ curl -i -X PUT -H "Content-Type: application/json" -H "Authorization: <Your SharedAccessSignature>" -d "{deviceId: \"edison1\"}" https://<Your IoT Hub Name>.azure-devices.net/devices/edison1?api-version=2016-02-03
 ```
+If you are using Windows* you may need to install Cygwin* in order to use curl. 
 
 You should receive a response like this:
 
