@@ -92,6 +92,8 @@ aws iot attach-principal-policy --principal "certificate-arn" --policy-name "Pub
 
 ## Determine AWS endpoint
 
+You can obtain the **host** to use by running the following command:
+
 ```
 aws iot describe-endpoint
 ```
@@ -108,12 +110,28 @@ scp -r privateKey.pem USERNAME@xxx.xxx.x.xxx:/home/root/.ssh
 
 Note that you must change `USERNAME@xxx.xxx.x.xxx` to match whatever username and IP address that you have set your board to.
 
+## Summary of information
+
+If you have followed all the steps outlined above, you now should have all of the information you will need to provide to your program so it can connect to the MQTT server:
+
+MQTT_SERVER use the **host** value you determined by running the `aws iot describe-endpoint` command, along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
+
+MQTT_CLIENTID use "<Your device name>".
+
+MQTT_TOPIC use "devices/<Your device name>"
+
+MQTT_CERT use the filename of the device certificate as described above.
+
+MQTT_KEY use the filename of the device key as described above.
+
+MQTT_CA use the filename of the CA certificate `/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem`
+
 ## Additional setup for C++
 
-When running the code on the Edison, you need to set the following "Commands to execute before application":
+When running your C++ code on the Edison, you need to set the MQTT parameters in Eclipse. Go to "Run configurations", and change the "Commands to execute before application" to the following:
 
 ```
-chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://A1QBI9OBPG6VY7.iot.us-west-2.amazonaws.com:8883"; export MQTT_CLIENTID="edison1"; export MQTT_CERT="/home/root/.ssh/cert.pem"; export MQTT_KEY="/home/root/.ssh/privateKey.pem"; export MQTT_CA="/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem"; export MQTT_TOPIC="devices/edison1"
+chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://<Your host name>:8883"; export MQTT_CLIENTID="<Your device ID>"; export MQTT_CERT="/home/root/.ssh/cert.pem"; export MQTT_KEY="/home/root/.ssh/privateKey.pem"; export MQTT_CA="/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem"; export MQTT_TOPIC="devices/<Your device ID>"
 ```
 
 Click on the "Apply" button to save these settings.
@@ -121,3 +139,15 @@ Click on the "Apply" button to save these settings.
 Click on the "Run" button to run the code on the Edison.
 
 ## Additional setup for JavaScript
+
+When running your JavaScript code on the Edison, you need to set the MQTT client parameters in the Intel XDK. You use the **config.json** file, by adding the following entries:
+
+```
+{
+ "MQTT_SERVER": "mqtts://<Your host name>:8883",
+ "MQTT_CLIENTID": "<Your device ID>",
+ "MQTT_CERT": "/home/root/.ssh/cert.pem",
+ "MQTT_KEY": "/home/root/.ssh/privateKey.pem",
+ "MQTT_TOPIC": "devices/<Your device ID>"
+}
+```
