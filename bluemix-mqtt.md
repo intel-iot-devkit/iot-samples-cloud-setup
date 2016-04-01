@@ -74,13 +74,26 @@
 - Make a note of the "Authentication Token" displayed on the "Your Device Credentials" page. Please note that "Authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token"
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/ibm-bluemix/ibm-dont-lose-info.png)
 
+## Summary of information
+
+If you have followed all the steps outlined above, you now should have all of the information you will need to provide to your program so it can connect to the MQTT server:
+
+MQTT_SERVER use "<Your organization ID>.messaging.internetofthings.ibmcloud.com", along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
+
+MQTT_CLIENTID use "d:<Your organization ID>:<Your device type>:<Your device ID>".
+
+MQTT_TOPIC use "iot-2/evt/status/fmt/json"
+
+MQTT_USERNAME use "use-token-auth".
+
+MQTT_PASSWORD use the string with your device's authorization token.
 
 ## Additional setup for C++
 
-When running the code on the Edison, you need to set the following "Commands to execute before application":
+When running your C++ code on the Edison, you need to set the MQTT parameters in Eclipse. Go to "Run configurations", and change the "Commands to execute before application" to the following:
 
 ```
-chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://???:8883"; export MQTT_CLIENTID="???"; export MQTT_USERNAME="???"; export MQTT_PASSWORD="???"; export MQTT_TOPIC="???"
+chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://<Your organization ID>.messaging.internetofthings.ibmcloud.com:8883"; export MQTT_CLIENTID="d:<Your organization ID>:<Your device type>:<Your device ID>"; export MQTT_USERNAME="use-token-auth"; export MQTT_PASSWORD="<Your authorization token>"; export MQTT_TOPIC="iot-2/evt/status/fmt/json"
 ```
 
 Click on the "Apply" button to save these settings.
@@ -88,3 +101,15 @@ Click on the "Apply" button to save these settings.
 Click on the "Run" button to run the code on the Edison.
 
 ## Additional setup for JavaScript
+
+When running your JavaScript code on the Edison, you need to set the MQTT client parameters in the Intel XDK. You use the **config.json** file, by adding the following entries:
+
+```
+{
+ "MQTT_SERVER": "mqtts://<Your organization ID>.messaging.internetofthings.ibmcloud.com:8883",
+ "MQTT_CLIENTID": "d:<Your organization ID>:<Your device type>:<Your device ID>",
+ "MQTT_USERNAME": "use-token-auth",
+ "MQTT_PASSWORD": "<Your authorization token>",
+ "MQTT_TOPIC": "iot-2/evt/status/fmt/json"
+}
+```
