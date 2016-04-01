@@ -21,7 +21,7 @@
 Once your Azure IoT Hub has been created, you need to obtain a SharedAccessSignature (SAS) token to perform adminitrativee actions such as creating or listing devices.
 
 - Go to your Dashboard, then click on the link to your new Azure IoT Hub resource.
-- Click on "Settings", then click on "Shared Access Policies".\
+- Click on "Settings", then click on "Shared Access Policies".
 ![](https://raw.githubusercontent.com/hybridgroup/intel-iot-examples-mqtt/feature/add-azure-images/images/azure/obtain-sas.png?token=AIP9DYwihTofuCs4t1Tw4f38jZhklivYks5XBs8KwA%3D%3D)
 - Obtain the ***host*** name and the ***primary key*** for the ***registryReadWrite*** policy.
 - Create an SharedAccessSignature (SAS) token to be used to create and list devices. You can use the `sastoken` command line program like this:
@@ -42,6 +42,7 @@ SharedAccessSignature sr=<Your IoT Hub Name>.azure-devices.net%2Fdevices&sig=<Su
 ```
 
 This SAS token will last for 1440 minutes before you will need to obtain a new one. It should be used only for administrative functions such as creating new devices. Each device will also need its own SAS token, which we will create in a subsequent step.
+-You can find the `sastoken` program under `support\azure`. Precompiled binaries for Windows, OSX, and Linux can be found in the `support\azure\build` folder.
 
 ## Create new device
 
