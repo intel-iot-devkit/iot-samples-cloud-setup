@@ -29,7 +29,7 @@ Once your Azure IoT Hub has been created, you need to obtain a SharedAccessSigna
 ```
 sastoken <Your IoT Hub Name>.azure-devices.net/devices/ <Your primary key> 1440 registryReadWrite
 ```
-For this to work you must be in the directory where you downloaded/cloned this example to. 
+For this to work you must be in the directory where you downloaded/cloned this example to.
 Ex (C:\Users\me\Documents\GitHub\intel-iot-examples-mqtt\support\azure\build\windows)
 
 The program will output your SAS token as a string like this:
@@ -51,7 +51,7 @@ You can use ***curl*** to create a new device for your Azure IoT Hub using the S
 ```
 $ curl -i -X PUT -H "Content-Type: application/json" -H "Authorization: <Your SharedAccessSignature>" -d "{deviceId: \"edison1\"}" https://<Your IoT Hub Name>.azure-devices.net/devices/edison1?api-version=2016-02-03
 ```
-If you are using Windows* you may need to install [Cygwin*](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/feature/image-link/installing-cygwin.md) in order to use curl. 
+If you are using Windows* you may need to install [Cygwin*](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/feature/image-link/installing-cygwin.md) in order to use curl.
 
 You should receive a response like this:
 
@@ -113,7 +113,7 @@ This SAS token will last for 1440 minutes before you will need to obtain a new o
 
 If you have followed all the steps outlined above, you now should have all of the information you will need to provide to your program so it can connect to the MQTT server:
 
-MQTT_SERVER use "<Your IoT Hub Name>.azure-devices.net".
+MQTT_SERVER use "<Your IoT Hub Name>.azure-devices.net", along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
 
 MQTT_CLIENTID use "<Your device name>".
 
@@ -125,4 +125,26 @@ MQTT_PASSWORD use the string with your device's SAS token.
 
 ## Additional setup for C++
 
+When running your C++ code on the Edison, you need to set the MQTT parameters in Eclipse. Go to "Run configurations", and change the "Commands to execute before application" to the following:
+
+```
+chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://<Your IoT Hub Name>.azure-devices.net:8883"; export MQTT_CLIENTID="<Your device ID>"; export MQTT_USERNAME="<Your IoT Hub Name>/<Your device name>"; export MQTT_PASSWORD="<Your device SAS token>"; export MQTT_TOPIC="devices/<Your device name>/messages/events/"
+```
+
+Click on the "Apply" button to save these settings.
+
+Click on the "Run" button to run the code on the Edison.
+
 ## Additional setup for JavaScript
+
+When running your JavaScript code on the Edison, you need to set the MQTT client parameters in the Intel XDK. You use the **config.json** file, by adding the following entries:
+
+```
+{
+ "MQTT_SERVER": "mqtts://<Your IoT Hub Name>.azure-devices.net:8883",
+ "MQTT_CLIENTID": "<Your device name>",
+ "MQTT_USERNAME": "<Your IoT Hub Name>/<Your device name>",
+ "MQTT_PASSWORD": "<Your device SAS token>",
+ "MQTT_TOPIC": "devices/<Your device ID>"
+}
+```
