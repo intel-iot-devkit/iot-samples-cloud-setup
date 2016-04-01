@@ -3,7 +3,7 @@
 ## MS Azure Initial Setup
 
 - Create an account on Microsoft Azure, if you do not yet have one.
-![](../../images/azure/create-free-account.png)
+![](https://raw.githubusercontent.com/hybridgroup/intel-iot-examples-mqtt/feature/add-azure-images/images/azure/create-free-account.png)
 
 - Login to your Microsoft Azure account.
 ![](../..//images/azure/sign-in-to-azure.png)
