@@ -6,7 +6,7 @@
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/feature/image-link-fix/images/azure/create-free-account.png)
 
 - Login to your Microsoft Azure account.
-![](../..//images/azure/sign-in-to-azure.png)
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/sign-in-to-azure.png)
 
 - Create a new IoT Hub by clicking on the "New" link on your Dashboard. Click on the "Internet of Things" links, then click on the "Azure IoT Hub" link.
 ![](../..//images/azure/create-new-iot-hub.png)
