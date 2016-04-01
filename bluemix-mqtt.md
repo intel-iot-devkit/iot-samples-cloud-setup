@@ -13,7 +13,7 @@
 ## Add Internet of Things Platform
 
 - Go to the "Dashboard"
-- Click on "+" to add a new service
+- Click on "Use Services or APIs" to add a new service
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/ibm-bluemix/ibm-use-service-api.png)
 
 - Click on "Internet of Things Platform"
