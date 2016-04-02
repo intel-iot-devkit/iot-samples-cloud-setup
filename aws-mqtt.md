@@ -3,13 +3,17 @@
 ## AWS IoT Initial Setup
 
 - Create an account on AWS, if you do not yet have one.
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-create-account.png)
 
 - Install the AWS CLI, by following the instructions at http://docs.aws.amazon.com/cli/latest/userguide/installing.html
+
+- For Windows* users be sure to add the aws path to your enviromental variables and always run the command prompt as administator.
 
 - Verify setup, by running this command:
 ```
 aws iot help
 ```
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-verify-install.png)
 
 ## Create new device
 
@@ -25,6 +29,8 @@ You should receive a response such as:
     "thingName": "edison1"
 }
 ```
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-create-device.png)
+
 
 ## Get list of devices
 
@@ -45,6 +51,8 @@ You should receive a response such as:
     ]
 }
 ```
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-list-things.png)
+
 
 ## Obtain and configure certificate for device use
 
@@ -65,6 +73,9 @@ You should receive a response such as:
     "certificateId": "somelongidhere"
 }
 ```
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-provision-a-cert)
+
+
 
 - Create/attach policy
 ```
