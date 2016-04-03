@@ -7,7 +7,46 @@
 
 - Install the AWS CLI, by following the instructions at http://docs.aws.amazon.com/cli/latest/userguide/installing.html
 
-- For Windows* users be sure to add the aws path to your enviromental variables and always run the command prompt as administator.
+### For Windows* Users
+- Be sure to add the aws path to your enviromental variables and always run the command prompt as administator.
+
+### Adding the aws path to enviromental variables on Windows*
+
+- Go to Start Menu
+
+- Type control panel
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup1.png)
+
+- Click on System
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup2.png)
+
+- Click on Advanced system settings
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup3.png)
+
+- Click on Enviromental Variables...
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup4.png)
+
+- Under the "User variables for me box" click on PATH then click Edit...
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup5.png)
+
+- Click "New" then add the directory you have installed awscli to. Then click "OK"
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup6.png)
+
+- Under the "System variables box" selecte the "path" variable then click "Edit..."
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup7.png)
+
+- If the enviromental path where you installed awscli is not there; Click "New" and add the directory and click "OK"
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup8.png)
+
+- On the Eenviromental Variables" window click "OK"
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup9.png)
+
+- On the System Properties window click "OK"
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup10.png)
+
+- For ease of use on Windows* while using AWSCLI follow the next steps of this tutorial in the directory of which you cloned this repo
+example (C:\Users\me\Documents\GitHub\intel-iot-examples-mqtt\support\aws)
+
 
 - Verify setup, by running this command:
 ```
@@ -91,6 +130,7 @@ You should receive a response such as:
     "policyVersionId": "1"
 }
 ```
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-create-attach-policy.png)
 
 - Attach certificate to device
 You will need the "certificate-arn" from the "Provision a certificate" step:
@@ -98,7 +138,7 @@ You will need the "certificate-arn" from the "Provision a certificate" step:
 ```
 aws iot attach-principal-policy --principal "certificate-arn" --policy-name "PubSubToAnyTopic"
 ```
-
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-attach-cert-to-device.png)
 
 
 ## Determine AWS endpoint
@@ -108,6 +148,7 @@ You can obtain the **host** to use by running the following command:
 ```
 aws iot describe-endpoint
 ```
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-determine-endpoint.png)
 
 ## Installing certificates to the Edison
 
@@ -120,6 +161,19 @@ scp -r privateKey.pem USERNAME@xxx.xxx.x.xxx:/home/root/.ssh
 ```
 
 Note that you must change `USERNAME@xxx.xxx.x.xxx` to match whatever username and IP address that you have set your board to.
+
+### Installing certificates to the Edison (Windows* only)
+
+- Use WINSCP for the next steps. [Installing WINSCP](https://github.com/intel-iot-devkit/how-to-code-samples/blob/master/docs/cpp/using-winscp.md)
+- Log into your device using WINSCP
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-winscp1.png)
+
+- Make sure your host machine is in the directory you ran your previous AWSCLI commands in
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-winscp2.png)
+
+- copy "cert.pem", "privateKey.pem", and "publicKey.pem" to your /home/root directory on your Edison
+![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-winscp3.png)
+
 
 ## Summary of information
 
