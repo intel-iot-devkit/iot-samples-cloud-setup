@@ -145,6 +145,6 @@ When running your JavaScript code on the Edison, you need to set the MQTT client
  "MQTT_CLIENTID": "<Your device name>",
  "MQTT_USERNAME": "<Your IoT Hub Name>/<Your device name>",
  "MQTT_PASSWORD": "<Your device SAS token>",
- "MQTT_TOPIC": "devices/<Your device ID>"
+ "MQTT_TOPIC": "devices/<Your device name>/messages/events/"
 }
 ```
