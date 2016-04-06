@@ -128,7 +128,7 @@ MQTT_PASSWORD use the string with your device's SAS token.
 When running your C++ code on the Edison, you need to set the MQTT parameters in Eclipse. Go to "Run configurations", and change the "Commands to execute before application" to the following:
 
 ```
-chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://<Your IoT Hub Name>.azure-devices.net:8883"; export MQTT_CLIENTID="<Your device ID>"; export MQTT_USERNAME="<Your IoT Hub Name>/<Your device name>"; export MQTT_PASSWORD="<Your device SAS token>"; export MQTT_TOPIC="devices/<Your device name>/messages/events/"
+chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://<Your IoT Hub Name>.azure-devices.net:8883"; export MQTT_CLIENTID="<Your device ID>"; export MQTT_USERNAME="<Your IoT Hub Name>.azure-devices.net/<Your device name>"; export MQTT_PASSWORD="<Your device SAS token>"; export MQTT_TOPIC="devices/<Your device name>/messages/events/"
 ```
 
 Click on the "Apply" button to save these settings.
@@ -143,7 +143,7 @@ When running your JavaScript code on the Edison, you need to set the MQTT client
 {
  "MQTT_SERVER": "mqtts://<Your IoT Hub Name>.azure-devices.net:8883",
  "MQTT_CLIENTID": "<Your device name>",
- "MQTT_USERNAME": "<Your IoT Hub Name>/<Your device name>",
+ "MQTT_USERNAME": "<Your IoT Hub Name>.azure-devices.net/<Your device name>",
  "MQTT_PASSWORD": "<Your device SAS token>",
  "MQTT_TOPIC": "devices/<Your device name>/messages/events/"
 }
