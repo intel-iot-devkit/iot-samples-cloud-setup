@@ -119,7 +119,7 @@ MQTT_CLIENTID use "<Your device name>".
 
 MQTT_TOPIC use "devices/<Your device name>/messages/events/"
 
-MQTT_USERNAME use "<Your IoT Hub Name>/<Your device name>".
+MQTT_USERNAME use "<Your IoT Hub Name>.azure-devices.net/<Your device name>".
 
 MQTT_PASSWORD use the string with your device's SAS token.
 
