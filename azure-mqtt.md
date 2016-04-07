@@ -113,13 +113,13 @@ This SAS token will last for 1440 minutes before you will need to obtain a new o
 
 If you have followed all the steps outlined above, you now should have all of the information you will need to provide to your program so it can connect to the MQTT server:
 
-MQTT_SERVER use "<Your IoT Hub Name>.azure-devices.net", along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
+MQTT_SERVER use "\<Your IoT Hub Name\>.azure-devices.net", along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
 
-MQTT_CLIENTID use "<Your device name>".
+MQTT_CLIENTID use "\<Your device name\>".
 
-MQTT_TOPIC use "devices/<Your device name>/messages/events/"
+MQTT_TOPIC use "devices/\<Your device name\>/messages/events/"
 
-MQTT_USERNAME use "<Your IoT Hub Name>.azure-devices.net/<Your device name>".
+MQTT_USERNAME use "\<Your IoT Hub Name\>.azure-devices.net/\<Your device name\>".
 
 MQTT_PASSWORD use the string with your device's SAS token.
 

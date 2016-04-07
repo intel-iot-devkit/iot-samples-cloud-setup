@@ -78,9 +78,9 @@
 
 If you have followed all the steps outlined above, you now should have all of the information you will need to provide to your program so it can connect to the MQTT server:
 
-MQTT_SERVER use "<Your organization ID>.messaging.internetofthings.ibmcloud.com", along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
+MQTT_SERVER use "\<Your organization ID\>.messaging.internetofthings.ibmcloud.com", along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
 
-MQTT_CLIENTID use "d:<Your organization ID>:<Your device type>:<Your device ID>".
+MQTT_CLIENTID use "d:\<Your organization ID\>:\<Your device type\>:\<Your device ID\>".
 
 MQTT_TOPIC use "iot-2/evt/status/fmt/json"
 

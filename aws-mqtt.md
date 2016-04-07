@@ -181,9 +181,9 @@ If you have followed all the steps outlined above, you now should have all of th
 
 MQTT_SERVER use the **host** value you determined by running the `aws iot describe-endpoint` command, along with either the "ssl://" protocol in C++ or "mqtts://" protocol from JavaScript.
 
-MQTT_CLIENTID use "<Your device name>".
+MQTT_CLIENTID use "\<Your device name\>".
 
-MQTT_TOPIC use "devices/<Your device name>"
+MQTT_TOPIC use "devices/\<Your device name\>"
 
 MQTT_CERT use the filename of the device certificate as described above.
 
