@@ -1,4 +1,4 @@
-# Intel how-To code examples with Message Queue Telemetry Transport\* (MQTT\*)
+# Intel how-to code examples with Message Queue Telemetry Transport\* (MQTT\*)
 
 This repository contains the setup information needed to add IoT cloud support to the how-to code examples for Amazon\* Web Services\* (AWS\*), IBM\* Bluemix\* Internet of Things, or Microsoft\* Azure\* IoT Hub.
 
