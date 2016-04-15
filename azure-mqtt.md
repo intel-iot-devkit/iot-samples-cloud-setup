@@ -5,25 +5,25 @@
 1. Create an account on [https://azure.microsoft.com/en-us](https://azure.microsoft.com/en-us), if you do not yet have one.
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/create-free-account.png)
 
-2. Log in to your account.
+2. Log into your account.
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/sign-in-to-azure.png)
 
-3. Create a new IoT hub by clicking **New > Internet of Things > Azure IoT Hub**.
+3. Click **New > Internet of Things > Azure IoT Hub**.
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/create-new-iot-hub.png)
 
-4. Enter the required information for your new IoT hub, and click **Create**.
+4. Enter the required information for your new Azure\* IoT Hub and click **Create**.
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/create-new-iot-hub-2.png)
 
 Your new Azure\* IoT Hub is created within a few moments.
 
 ## Obtain a shared access signature (SAS) token for administrative use
 
-Once your Azure\* IoT Hub is created, you need to obtain an SAS token to perform adminitrativee actions, such as creating or listing devices. To do this:
+Once your Azure\* IoT Hub is created, you need to obtain an SAS token to perform administrative actions, such as creating or listing devices. To do this:
 
 1. On your dashboard, click the link to your new Azure\* IoT Hub.
 2. Go to **Settings > Shared access policies > registryReadWrite**.
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/obtain-sas.png)
-3. Obtain the **Primary key** and the corresponding ** Connection string**.
+3. Obtain the **Primary key** and the corresponding **Connection string**.
 4. Create an SAS token as follows:
 
         sastoken <Your IoT Hub Name>.azure-devices.net/devices/ <Your primary key> 1440 registryReadWrite
@@ -45,6 +45,7 @@ You can use the `curl` command to create a new device for your Azure\* IoT Hub u
 ```
 $ curl -i -X PUT -H "Content-Type: application/json" -H "Authorization: <Your SharedAccessSignature>" -d "{deviceId: \"edison1\"}" https://<Your IoT Hub Name>.azure-devices.net/devices/edison1?api-version=2016-02-03
 ```
+
 If you are using Windows\*, you may need to install Cygwin* (see [https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/feature/image-link/installing-cygwin.md](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/feature/image-link/installing-cygwin.md) for instructions) to be able to use `curl`.
 
 You should receive a response that looks like this:
@@ -53,7 +54,7 @@ You should receive a response that looks like this:
 
 ## Get the list of devices
 
-You can use `curl` to get the list of current devices for your Azure\* IoT Hub using the SAS token with ***registryReadWrite*** access as follows:
+You can use `curl` to get the list of current devices for your Azure\* IoT Hub using the SAS token with **registryReadWrite** access as follows:
 
 ```
 curl -i -H "Accept: application/json" -H "Authorization: <Your SharedAccessSignature>" https://<Your IoT Hub Name>.azure-devices.net/devices?api-version=2016-02-03
@@ -67,7 +68,7 @@ You need the device's **Primary key** or **Secondary key** to obtain an SAS toke
 
 ## Obtain an SAS token for device use
 
-You need to create an SAS token for enabling the Intel® Edison board to connect to the Azure\* IoT Hub for recording data. The SAS token for this purpose has fewer privileges than the one created for administrative use. You can use `sastoken` as follows:
+You need to create an SAS token for enabling the Intel® Edison board to connect to your Azure\* IoT Hub for recording data. The SAS token for this purpose has fewer privileges than the one created for administrative use. You can use `sastoken` as follows:
 
 ```
 sastoken <Your IoT Hub Name>.azure-devices.net/devices/<Your device name> <Your device primary key> 1440
