@@ -74,7 +74,7 @@ You should see the output like this:
 
     You should see the output like this:
 
-    ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-provision-a-cert)
+    ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-provision-a-cert.png)
 
 2. Create/attach policy:
 
