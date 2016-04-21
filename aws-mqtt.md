@@ -7,7 +7,7 @@
 
 2. Install the AWS\* CLI by following the instructions at http://docs.aws.amazon.com/cli/latest/userguide/installing.html.
 
-### Adding the AWS\* CLI path to enviroment variables on Windows\*
+### Adding the AWS\* CLI path to environment variables on Windows\*
 
 1. Go to **Control Panel** and click **System**.
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-win-path-setup2.png)
