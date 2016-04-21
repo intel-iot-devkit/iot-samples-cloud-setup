@@ -1,31 +1,31 @@
-#Installing Cygwin* on Windows*
+#Installing Cygwin\* on Windows*
 
-1. Go to https://cygwin.com/
+1. Go to https://cygwin.com.
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script.png)
 
-2. Go to the downloads section.
+2. In the pane on the left, click **Install Cygwin**.
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script2.png)
 
-3. Download and run the exe. 
+3. Download and run the executable file.<br> 
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script3.png)
 
-4. Only use default install!!! Download will be several gigabytes if you install all.
-![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script4.png)
+  **Important:** Use the default installation settings. Otherwise, if you install all the packages, it takes up to several gigabytes of free space.
 
-5. Go to windows control panel and click on system.
+4. Go to Windows\* Control Panel and click **System**.
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script5.png)
 
-6.click on advance settings.
+5. Click **Advanced system settings**.
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script6.png)
 
-7.Under advanced, click on enviromental variables.
+6. On the **Advanced** tab, click **Enviroment Variables**.<br>
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script7.png)
 
-8. Find path on the second box, click it, then click edit.
+7. In the **System variables** box, double-click **Path**.<br>
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script8.png)
 
-9. Add ";C\cygwin64\bin" to you path. (assuming this is where you intalled cygwin)
+8. In the **Variable value** field, add the full path to the Cygwin\* installation directory (for example, `C\cygwin64\bin`) at the end of the line.
 ![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script9.png)
 
-10. Open your windows command promt and use the linux/unix commands of your choosing.
-![](https://raw.githubusercontent.com/intel-iot-devkit/how-to-code-samples/master/images/cpp/shell-script10.png)
+  **Note:** Do not forget to add a semicolon (;) before the value to separate it from the other values.
+
+Now you can use Linux\*/Unix\* commands in Windows\* Command Prompt.
