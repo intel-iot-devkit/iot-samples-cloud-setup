@@ -16,6 +16,18 @@
 
 Your new Azure\* IoT Hub is created within a few moments.
 
+## Download the **sastoken** command line program
+
+In order to authenticate to the Azure\* IoT Hub, you need to create a Shared Access Signature (SAS) token. The easiest way to do this, is using a command-line program called **sastoken**.
+
+Precompiled binaries for Windows\*, OS X\*, and Linux\* have been created and can be found for download here:
+
+[https://github.com/intel-iot-devkit/intel-iot-examples-mqtt/releases](https://github.com/intel-iot-devkit/intel-iot-examples-mqtt/releases)
+
+All you need to do is download the correct version for your platform, and put the file somewhere where you will be able to run it from the command-line.
+
+You can find the source code for the `sastoken` program under `support/azure/sastoken.go`.
+
 ## Obtain a shared access signature (SAS) token for administrative use
 
 Once your Azure\* IoT Hub is created, you need to obtain an SAS token to perform administrative actions, such as creating or listing devices. To do this:
@@ -24,19 +36,17 @@ Once your Azure\* IoT Hub is created, you need to obtain an SAS token to perform
 2. Go to **Settings > Shared access policies > registryReadWrite**.
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/obtain-sas.png)
 3. Obtain the **Primary key** and the corresponding **Connection string**.
-4. Create an SAS token as follows:
+4. Create an SAS token by running the command as follows:
 
         sastoken <Your IoT Hub Name>.azure-devices.net/devices/ <Your primary key> 1440 registryReadWrite
 
-**Note:** For this to work, you must be in the directory where you downloaded/cloned this example (e.g., `C:\Users\me\Documents\GitHub\intel-iot-examples-mqtt\support\azure\build\windows`).
+**Note:** For this to work, you must be in the directory where you downloaded the **sastoken** program (e.g., `C:\Users\me\Downloads`).
 
 Your SAS token should look similar to this:
 
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/sas-example.png)
 
-It is valid for 24 hours and should be used only for performing administrative functions, such as creating new devices. Each device also needs its own SAS token, which we will create in subsequent steps.
-
-You can find the `sastoken` program under `support\azure`. Precompiled binaries for Windows\*, OS X\*, and Linux\* can be found in the `support\azure\build` folder.
+This token will only be valid for 24 hours (1440 minutes) and should be used only for performing administrative functions, such as creating new devices. Each device also needs its own SAS token, which we will create in subsequent steps.
 
 ## Create a new device
 
@@ -78,26 +88,25 @@ Your SAS token should look similar to this:
 
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/azure/device-sas-example.png)
 
-
-It is valid for 24 hours and should be used only for the device for which it is created. In other words, each device that you wish to connect needs its own SAS token.
+It is valid for 24 hours (1440 minutes) and if you wish to change the duration for how long the SAS token will be valid, enter a different number of minutes. Note that the SAS token for a specific device should be used only for the device for which it is created. In other words, each device that you wish to connect needs its own SAS token.
 
 ## Summary
 
 If you have followed all the steps above, you should have all the information that your program needs to connect to the MQTT\* server:
 
-- `MQTT_SERVER` - use `\<Your IoT Hub Name\>.azure-devices.net`, along with the `ssl://` (for C++) or the `mqtts://` (for JavaScript\*) protocol
+- `MQTT_SERVER` - use `<Your IoT Hub Name>.azure-devices.net`, along with the `ssl://` (for C++) or the `mqtts://` (for JavaScript\*) protocol
 
-- `MQTT_CLIENTID` - use `\<Your device name\>`
+- `MQTT_CLIENTID` - use `<Your device name>`
 
-- `MQTT_TOPIC` - use `devices/\<Your device name\>/messages/events/`
+- `MQTT_TOPIC` - use `devices/<Your device name>/messages/events/`
 
-- `MQTT_USERNAME` - use `\<Your IoT Hub Name\>.azure-devices.net/\<Your device name\>`
+- `MQTT_USERNAME` - use `<Your IoT Hub Name>.azure-devices.net/<Your device name>`
 
 - `MQTT_PASSWORD` - use the string with your device's SAS token.
 
 ## Additional setup for C++
 
-When running your C++ code on the Intel® Edison board, you need to set the MQTT\* client parameters in Eclipse\*. To do that: 
+When running your C++ code on the Intel® Edison board, you need to set the MQTT\* client parameters in Eclipse\*. To do that:
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
