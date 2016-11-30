@@ -46,6 +46,12 @@ You should see the output like this:
 
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-verify-install.png)
 
+## AWS permissions
+
+If you run into any errors such as "AccessDeniedException" when trying to use the AWS CLI, they are likely due to insufficient permissions having been granted to the user account you are trying to use.
+
+Make sure that the account has the needed IAM policy for access. Check out http://docs.aws.amazon.com/iot/latest/developerguide/iam-policies.html and make sure you have assigned them using http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-using.html
+
 ## Create a new device
 
 To create a new device, use the `create-thing` command as follows:
@@ -95,7 +101,7 @@ You should see the output like this:
 You can obtain the **host** to use by running the following command:
 
     aws iot describe-endpoint
-    
+
 You should see the output like this:
 
 ![](https://github.com/hybridgroup/intel-iot-examples-mqtt/blob/master/images/aws/aws-determine-endpoint.png)
