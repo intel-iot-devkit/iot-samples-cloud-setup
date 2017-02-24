@@ -75,10 +75,12 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
  "MQTT_USERNAME": "<M2X Device ID>",
  "MQTT_PASSWORD": "",
  "MQTT_TOPIC": "m2x/<M2X Primary API Key>/requests",
- "MQTT_SERVICE": "m2x",
- "API_KEY": "<M2X Primary API Key>",
- "DEVICE_ID": "<M2X Device ID>",
- "STREAM_ID": "<M2X Stream ID>"
+ "MQTT_SERVICE": {
+    "NAME": "m2x",
+    "API_KEY": "<M2X Primary API Key>",
+    "DEVICE_ID": "<M2X Device ID>",
+    "STREAM_ID": "<M2X Stream ID>"
+  }
 }
 ```
 
@@ -93,9 +95,11 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
  "MQTT_USERNAME": "<M2X Device ID>",
  "MQTT_PASSWORD": "",
  "MQTT_TOPIC": "m2x/<M2X Primary API Key>/requests",
- "MQTT_SERVICE": "m2x",
- "API_KEY": "<M2X Primary API Key>",
- "DEVICE_ID": "<M2X Device ID>",
- "STREAM_ID": "<M2X Stream ID>"
+ "MQTT_SERVICE": {
+    "NAME": "m2x",
+    "API_KEY": "<M2X Primary API Key>",
+    "DEVICE_ID": "<M2X Device ID>",
+    "STREAM_ID": "<M2X Stream ID>"
+  }
 }
 ```
