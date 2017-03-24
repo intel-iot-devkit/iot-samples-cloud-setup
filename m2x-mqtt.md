@@ -90,11 +90,11 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
 
 ```json
 {
- "MQTT_SERVER": "ssl://<M2X Primary API Key>@api-m2x.att.com",
+ "MQTT_SERVER": "api-m2x.att.com",
+ "MQTT_PORT": "8883",
  "MQTT_CLIENTID": "<M2X Device ID>",
  "MQTT_USERNAME": "<M2X Device ID>",
  "MQTT_PASSWORD": "",
- "MQTT_TOPIC": "m2x/<M2X Primary API Key>/requests",
  "MQTT_SERVICE": {
     "NAME": "m2x",
     "API_KEY": "<M2X Primary API Key>",
