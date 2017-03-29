@@ -1,8 +1,8 @@
-# Connecting to AT&T M2X IoT using MQTT
+# Connecting to AT&T\* M2X\* IoT using MQTT\*
 
-## M2X IoT initial setup
+## M2X IoT initial signup
 
-1. Create an account on https://m2x.att.com, if you do not yet have one.
+1. Create an account on https://m2x.att.com, if you do not yet have one. If you already have an account, you can skip directly to "Adding your device" below.
 ![](./images/att-m2x/m2x-signup.png)
 
 2. Fill out your information when signing up.
@@ -11,10 +11,12 @@
 3. Verify your email address by clicking the link in the email recieved by AT&T. (Be sure to check your spam folder, the verification is requred to continue.)
 ![](./images/att-m2x/verify-email.png)
 
-4. Select the "Select Device" button.
+## Adding your device
+
+1. Select the "Select Device" button.
 ![](./images/att-m2x/select-device.png)
 
-5. Define your device. Select "other" in the select your device dropdown box. Then continue to define your device.
+2. Define your device. Select "other" in the select your device dropdown box. Then continue to define your device.
 ![](./images/att-m2x/define-device.png)
 
 ## Testing your device
