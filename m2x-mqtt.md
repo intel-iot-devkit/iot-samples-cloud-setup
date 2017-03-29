@@ -15,7 +15,7 @@
 
 If you have a brand new account, and are adding your very first device, follow these instructions. Otherwise, skip to "Adding another device"
 
-1. 1. Click on the "Devices" link on the top of the page to navigate to the "Devices" page, then click on the "Create Device"
+1. Click on the "Devices" link on the top of the page to navigate to the "Devices" page, then click on the "Create Device"
 ![](./images/att-m2x/click-create-device.png)
 
 1. Select the "Select Device" button.
@@ -26,7 +26,7 @@ If you have a brand new account, and are adding your very first device, follow t
 
 ## Adding another device
 
-If you have a brand new account, and are adding your very first device, follow these instructions. Otherwise, skip to "Adding another device"
+If you have an existing account, and are adding another device, follow these instructions.
 
 1. Click on the "Devices" link on the top of the page to navigate to the "Devices" page.
 ![](./images/att-m2x/m2x-devices.png)
