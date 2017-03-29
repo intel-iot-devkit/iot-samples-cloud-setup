@@ -2,7 +2,7 @@
 
 ## M2X IoT initial signup
 
-1. Create an account on https://m2x.att.com, if you do not yet have one. If you already have an account, you can skip directly to "Adding your device" below.
+1. Create an account on https://m2x.att.com, if you do not yet have one. If you already have an account, you can skip directly to "Adding your first device" below.
 ![](./images/att-m2x/m2x-signup.png)
 
 2. Fill out your information when signing up.
@@ -11,15 +11,42 @@
 3. Verify your email address by clicking the link in the email recieved by AT&T. (Be sure to check your spam folder, the verification is requred to continue.)
 ![](./images/att-m2x/verify-email.png)
 
-## Adding your device
+## Adding your first device
+
+If you have a brand new account, and are adding your very first device, follow these instructions. Otherwise, skip to "Adding another device"
+
+1. 1. Click on the "Devices" link on the top of the page to navigate to the "Devices" page, then click on the "Create Device"
+![](./images/att-m2x/click-create-device.png)
 
 1. Select the "Select Device" button.
 ![](./images/att-m2x/select-device.png)
 
-2. Define your device. Select "other" in the select your device dropdown box. Then continue to define your device.
+2. Define your device. Select "other" in the select your device dropdown box. Then continue to define your device. Make sure that you create a new Stream at the same time that you create your device.
 ![](./images/att-m2x/define-device.png)
 
-## Testing your device
+## Adding another device
+
+If you have a brand new account, and are adding your very first device, follow these instructions. Otherwise, skip to "Adding another device"
+
+1. Click on the "Devices" link on the top of the page to navigate to the "Devices" page.
+![](./images/att-m2x/m2x-devices.png)
+
+2. Click on the "Create New" dropdown, and choose "Device" to display the "Create Device" dialog. Complete the needed information, then click on "Create" to define your device:
+![](./images/att-m2x/m2x-create-device.png)
+
+Next, add a stream for your new device.
+
+## Adding a Stream
+
+1. Click on the link for your new Device from the "Devices" page, then scroll down and click on the "Add Stream" button:
+![](./images/att-m2x/m2x-add-stream.png)
+
+1. Now enter all of the needed information for your new stream:
+![](./images/att-m2x/m2x-add-stream-info.png)
+
+## Testing your device (optional)
+
+If you want to test your new device using the cURL command, follow these instructions.
 
 1. Copy the cURL command and click the "generate my chart" button.
 ![](./images/att-m2x/test-device.png)
@@ -35,7 +62,7 @@ When you now log into AT&T M2X platform you will now be able to view all of your
 
 ## Summary
 
-If you have followed all the steps above, you should have all the information that your program needs to connect to the MQTT\* server:
+If you have followed all the required steps above, you should have all the information that your program needs to connect to the MQTT\* server:
 
 - `MQTT_SERVER` - use `<M2X Primary API Key>@api-m2x.att.com`, along with the `ssl://` (for C++) or the `mqtts://` (for JavaScript\*) protocol
 
