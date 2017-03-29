@@ -88,7 +88,7 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
-        chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://api-m2x.att.com:8883"; export MQTT_CLIENTID="<user chosen unique client id>"; export MQTT_USERNAME="<M2X API Key>"; export MQTT_SERVICE_NAME="m2x"; export MQTT_M2X_API_KEY="<M2X API Key>"; export MQTT_M2X_DEVICE_ID="<M2X Device ID>"; export MQTT_M2X_STREAM_ID="<M2X Stream ID>"
+        export MQTT_SERVER="ssl://api-m2x.att.com:8883"; export MQTT_CLIENTID="<user chosen unique client id>"; export MQTT_USERNAME="<M2X API Key>"; export MQTT_SERVICE_NAME="m2x"; export MQTT_M2X_API_KEY="<M2X API Key>"; export MQTT_M2X_DEVICE_ID="<M2X Device ID>"; export MQTT_M2X_STREAM_ID="<M2X Stream ID>"
 
 2. Click the **Apply** button to save these settings.
 3. Click the **Run** button to run the code on your board.
