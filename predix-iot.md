@@ -5,16 +5,19 @@ To get started using GE\* Predix\* IoT (https://www.predix.io/), you must first 
 ## Register for a Predix\* account
 
 [Registration instructions](https://docs.predix.io/en-US/content/platform/get_started/get_started_for_predix_developers/predix-development-environment-setup#task_a0b9d32e-24ff-4c84-a210-713527bce17c)
+
 First, signup for a Predix\* Developer account. If you already have an account, you can skip to the next step.
 
 ## Install the Cloud Foundry\* Command Line Tool
 
 [Cloud Foundry Downloads](https://github.com/cloudfoundry/cli#downloads)
+
 Now, install the Cloud Foundry\* Command Line Tool. If you already have installed it, you can skip to the next step.
 
 ## Predix\* setup
 
 1. Clone the predix-scripts repository
+
 Use git to clone the Predix\* repository that contains the setup scripts, as follows:
 
 ```
@@ -23,6 +26,7 @@ cd predix-scripts
 ```
 
 2. Edit the variables file
+
 Use your text editor to open and modify the file `/bash/scripts/variables.sh` to enter your account's UAA configuration data for the following values:
 
 ```
@@ -45,6 +49,7 @@ UAA_CLIENTID_GENERIC_SECRET="secret"
 ```
 
 3. Create application and services
+
 Now you are ready to run the script that creates your Predix\* application and all needed services. Run the following command:
 
 ```
@@ -58,9 +63,13 @@ Once the script is done, it will have created the application in the Predix\* cl
 If you have followed all the steps above, you should now have all the information that your program needs to connect to Predix\*:
 
 `uaa_client_id` - The UAA Client ID for your account
+
 `uaa_client_secret` - The UAA client secret
+
 `uaa_url` - Which UAA URL to use
+
 `timeseries_zone_id` - timeseries zone id
+
 `timeseries_ingest_url` - timeseries ingestion url
 
 ## Additional setup for C++
