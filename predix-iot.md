@@ -8,6 +8,8 @@ To get started using GE\* Predix\* IoT (https://www.predix.io/), you must first 
 
 First, signup for a Predix\* Developer account. If you already have an account, you can skip to the next step.
 
+![](./images/predix/predix-signup.png)
+
 ## Install the Cloud Foundry\* Command Line Tool
 
 [Cloud Foundry Downloads](https://github.com/cloudfoundry/cli#downloads)
