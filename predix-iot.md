@@ -32,23 +32,28 @@ cd predix-scripts
 Use your text editor to open and modify the file `/bash/scripts/variables.sh` to enter your account's UAA configuration data for the following values:
 
 ```
-UAA_USER_NAME="app_user_1"
+# The username of the new user to authenticate with the application
+UAA_USER_NAME="<enter your user name, same as your email>"
 
 # The email address of username above
-UAA_USER_EMAIL="app_user_1@ge.com"
+UAA_USER_EMAIL="<enter your email>"
 
 # The password of the user above
-UAA_USER_PASSWORD="app_user_1"
+UAA_USER_PASSWORD="<enter your password>"
 
 # The secret of the Admin client ID (Administrator Credentails)
-UAA_ADMIN_SECRET="secret"
+UAA_ADMIN_SECRET="<choose a password>"
 
 # The generic client ID that will be created with necessary UAA scope/autherities
-UAA_CLIENTID_GENERIC="app_client_id"
+UAA_CLIENTID_GENERIC="<choose a client id>"
 
 # The generic client ID password
-UAA_CLIENTID_GENERIC_SECRET="secret"
+UAA_CLIENTID_GENERIC_SECRET="<choose a password>"
 ```
+
+For UAA_USER_NAME, UAA_USER_EMAIL, and UAA_USER_PASSWORD you must enter the same values that match those for your Predix account.
+
+Note that for UAA_ADMIN_SECRET, UAA_CLIENTID_GENERIC, and UAA_CLIENTID_GENERIC_SECRET you should enter values of your own choosing, since those accounts will be created as part of provisioning your new app.
 
 3. Create application and services
 
