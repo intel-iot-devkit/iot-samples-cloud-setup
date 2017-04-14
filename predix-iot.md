@@ -81,7 +81,7 @@ If you have followed all the steps above, you should now have all the informatio
 
 ## Additional setup for C++
 
-When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you will need to use the RESTful client interface by setting the correct parameters in Eclipse\*. To do that:
+When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you will need to use the WebSockets client interface by setting the correct parameters in Eclipse\*. To do that:
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
@@ -92,7 +92,7 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 ## Additional setup for JavaScript\*
 
-When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the REST interface, by setting the client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
+When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the WebSockets interface, by setting the client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
 
 ```json
 {
@@ -110,6 +110,34 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
 
 ## Additional setup for Python\*
 
-When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the REST interface, by setting the client parameters. Add the following entries to the **config.json** file:
+When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the WebSockets interface, by setting the client parameters. Add the following entries to the **config.json** file:
 
-       goes here...
+```json
+{
+  "services": {
+    "predix": {
+      "uaa_client_id": "<uaa client id>",
+      "uaa_client_secret": "<uaa client secret>",
+      "uaa_url": "<uaa url>",
+      "timeseries_zone_id": "<timeseries zone id>",
+      "timeseries_ingest_url": "<timeseries ingestion ur>l"
+    }
+  }
+}
+```
+
+## Viewing data for debugging
+
+You can view data for debugging by using the Predix\* Tool Kit.
+
+1. Go to [https://www.predix.io/predix-env/predix-toolkit](https://www.predix.io/predix-env/predix-toolkit)
+
+![](./images/predix/predix-toolkit.png)
+
+2. Login to your account, using the "Login as Client" link. Enter the UAA URL, client ID, and client secret that you obtained when you created your Predix\* application.
+
+3. Click on "Time Series Query" link.
+
+4. Select "Latest Datapoints Request" from the "Choose Request" dropdown. Enter the "predix-zone-id" that you obtained when you created your Predix\* application. In the "Request Body" change the value "Compressor-2015:CompressionRatio" to "sensor-data".
+
+5. Click on the "Submit" button, and the most recent data should be displayed.
