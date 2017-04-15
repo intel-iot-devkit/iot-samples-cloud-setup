@@ -4,17 +4,21 @@ To get started using GE\* Predix\* IoT (https://www.predix.io/), you must first 
 
 ## Register for a Predix\* account
 
-[Registration instructions](https://docs.predix.io/en-US/content/platform/get_started/get_started_for_predix_developers/predix-development-environment-setup#task_a0b9d32e-24ff-4c84-a210-713527bce17c)
+First, signup for a Predix\* Developer account.
 
-First, signup for a Predix\* Developer account. If you already have an account, you can skip to the next step.
+Follow the [registration instructions](https://docs.predix.io/en-US/content/platform/get_started/get_started_for_predix_developers/predix-development-environment-setup#task_a0b9d32e-24ff-4c84-a210-713527bce17c).
+
+If you already have an account, you can skip to the next step.
 
 ![](./images/predix/predix-signup.png)
 
 ## Install the Cloud Foundry\* Command Line Tool
 
-[Cloud Foundry Downloads](https://github.com/cloudfoundry/cli#downloads)
+Now, install the Cloud Foundry\* Command Line Tool.
 
-Now, install the Cloud Foundry\* Command Line Tool. If you already have installed it, you can skip to the next step.
+Follow the installation instructions from the [Cloud Foundry Downloads](https://github.com/cloudfoundry/cli#downloads).
+
+If you already have installed it, you can skip to the next step.
 
 ## Predix\* setup
 
