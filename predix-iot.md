@@ -89,7 +89,7 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
-      export PREDIX_UAA_CLIENT_ID="[<uaa client id]"; export PREDIX_UAA_CLIENT_SECRET="[uaa client secret]"; export PREDIX_UAA_URL="[uaa url]"; export PREDIX_TIMESERIES_ZONE_ID="[timeseries zone id]"; export PREDIX_TIMESERIES_INGEST_URL="[timeseries ingest url]"
+      export PREDIX_UAA_CLIENT_ID="[uaa client id]"; export PREDIX_UAA_CLIENT_SECRET="[uaa client secret]"; export PREDIX_UAA_URL="[uaa url]"; export PREDIX_TIMESERIES_ZONE_ID="[timeseries zone id]"; export PREDIX_TIMESERIES_INGEST_URL="[timeseries ingest url]"
 
 2. Click the **Apply** button to save these settings.
 3. Click the **Run** button to run the code on your board.
