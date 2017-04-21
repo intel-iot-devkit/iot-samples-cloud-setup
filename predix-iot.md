@@ -89,7 +89,7 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
-        info here...
+      export PREDIX_UAA_CLIENT_ID="<uaa client id>"; export PREDIX_UAA_CLIENT_SECRET="<uaa client secret>"; export PREDIX_UAA_URL="<uaa url>"; export PREDIX_TIMESERIES_ZONE_ID="<timeseries zone id>"; export PREDIX_TIMESERIES_INGEST_URL="<timeseries ingest url>"
 
 2. Click the **Apply** button to save these settings.
 3. Click the **Run** button to run the code on your board.
@@ -99,7 +99,6 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the WebSockets interface, by setting the client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
 
 ```json
-{
   "services": {
     "predix": {
       "uaa_client_id": "<uaa client id>",
@@ -109,7 +108,6 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
       "timeseries_ingest_url": "<timeseries ingestion ur>l"
     }
   }
-}
 ```
 
 ## Additional setup for Python\*
@@ -117,7 +115,6 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
 When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the WebSockets interface, by setting the client parameters. Add the following entries to the **config.json** file:
 
 ```json
-{
   "services": {
     "predix": {
       "uaa_client_id": "<uaa client id>",
@@ -127,7 +124,6 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
       "timeseries_ingest_url": "<timeseries ingestion ur>l"
     }
   }
-}
 ```
 
 ## Viewing data for debugging
