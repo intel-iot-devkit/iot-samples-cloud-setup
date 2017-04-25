@@ -62,19 +62,7 @@ When you now log into AT&T M2X platform you will now be able to view all of your
 
 ## Summary
 
-If you have followed all the required steps above, you should have all the information that your program needs to connect to the MQTT\* server:
-
-- `MQTT_SERVER` - use `<M2X Primary API Key>@api-m2x.att.com`, along with the `ssl://` (for C++) or the `mqtts://` (for JavaScript\*) protocol
-
-- `MQTT_CLIENTID` - use `<M2X Device ID>`
-
-- `MQTT_TOPIC` - use `m2x/<M2X Primary API Key>/requests`
-
-- `MQTT_USERNAME` - use `<M2X Device ID>`
-
-- `MQTT_PASSWORD` - leave blank.
-
-- `MQTT_SERVICE` - set to `m2x`.
+If you have followed all the required steps above, you should have all the information that your program needs to connect to the M2X\* server:
 
 - `API_KEY` - set to `<M2X Primary API Key>`.
 
@@ -84,11 +72,11 @@ If you have followed all the required steps above, you should have all the infor
 
 ## Additional setup for C++
 
-When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters in Intel® System Studio\*. To do that:
+When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X\* client parameters in Intel® System Studio\*. To do that:
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
-        export MQTT_SERVER="ssl://api-m2x.att.com:8883"; export MQTT_CLIENTID="<user chosen unique client id>"; export MQTT_USERNAME="<M2X API Key>"; export MQTT_SERVICE_NAME="m2x"; export MQTT_M2X_API_KEY="<M2X API Key>"; export MQTT_M2X_DEVICE_ID="<M2X Device ID>"; export MQTT_M2X_STREAM_ID="<M2X Stream ID>"
+        export M2X_API_KEY="[M2X API Key]"; export M2X_DEVICE_ID="[M2X Device ID]"; export M2X_STREAM_ID="[M2X Stream ID]"
 
 2. Click the **Apply** button to save these settings.
 3. Click the **Run** button to run the code on your board.
@@ -98,17 +86,13 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
 
 ```json
-{
- "MQTT_SERVER": "mqtts://<M2X Primary API Key>@api-m2x.att.com",
- "MQTT_CLIENTID": "<M2X Device ID>",
- "MQTT_USERNAME": "<M2X Device ID>",
- "MQTT_PASSWORD": "",
- "MQTT_TOPIC": "m2x/<M2X Primary API Key>/requests",
- "MQTT_SERVICE": {
-    "NAME": "m2x",
-    "API_KEY": "<M2X Primary API Key>",
-    "DEVICE_ID": "<M2X Device ID>",
-    "STREAM_ID": "<M2X Stream ID>"
+"services": {
+  "m2x": {
+    "api_key": "[M2X Primary API Key]",
+    "device_id": "[M2X Device ID]",
+    "stream_id": "[M2X Stream ID]",
+    "timeseries_zone_id": "<timeseries zone id>",
+    "timeseries_ingest_url": "<timeseries ingestion ur>l"
   }
 }
 ```
@@ -118,14 +102,13 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
 When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters on the board itself. Add the following entries to the **config.json** file:
 
 ```json
-{
- "MQTT_SERVER": "api-m2x.att.com",
- "MQTT_USERNAME": "<M2X Primary API Key>",
- "MQTT_SERVICE": {
-    "NAME": "m2x",
-    "API_KEY": "<M2X Primary API Key>",
-    "DEVICE_ID": "<M2X Device ID>",
-    "STREAM_ID": "<M2X Stream ID>"
+"services": {
+  "m2x": {
+    "api_key": "[M2X Primary API Key]",
+    "device_id": "[M2X Device ID]",
+    "stream_id": "[M2X Stream ID]",
+    "timeseries_zone_id": "<timeseries zone id>",
+    "timeseries_ingest_url": "<timeseries ingestion ur>l"
   }
 }
 ```
