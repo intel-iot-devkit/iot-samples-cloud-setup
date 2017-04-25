@@ -83,7 +83,7 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 ## Additional setup for JavaScript\*
 
-When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
+When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X\* client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
 
 ```json
    "services": {
@@ -97,7 +97,7 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
 
 ## Additional setup for Python\*
 
-When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters on the board itself. Add the following entries to the **config.json** file:
+When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X\* client parameters on the board itself. Add the following entries to the **config.json** file:
 
 ```json
    "services": {
