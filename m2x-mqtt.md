@@ -86,15 +86,15 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
 
 ```json
-"services": {
-  "m2x": {
-    "api_key": "[M2X Primary API Key]",
-    "device_id": "[M2X Device ID]",
-    "stream_id": "[M2X Stream ID]",
-    "timeseries_zone_id": "<timeseries zone id>",
-    "timeseries_ingest_url": "<timeseries ingestion ur>l"
-  }
-}
+   "services": {
+     "m2x": {
+       "api_key": "[M2X Primary API Key]",
+       "device_id": "[M2X Device ID]",
+       "stream_id": "[M2X Stream ID]",
+       "timeseries_zone_id": "<timeseries zone id>",
+       "timeseries_ingest_url": "<timeseries ingestion ur>l"
+     }
+   }
 ```
 
 ## Additional setup for Python\*
@@ -102,13 +102,13 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
 When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters on the board itself. Add the following entries to the **config.json** file:
 
 ```json
-"services": {
-  "m2x": {
-    "api_key": "[M2X Primary API Key]",
-    "device_id": "[M2X Device ID]",
-    "stream_id": "[M2X Stream ID]",
-    "timeseries_zone_id": "<timeseries zone id>",
-    "timeseries_ingest_url": "<timeseries ingestion ur>l"
-  }
-}
+   "services": {
+     "m2x": {
+       "api_key": "[M2X Primary API Key]",
+       "device_id": "[M2X Device ID]",
+       "stream_id": "[M2X Stream ID]",
+       "timeseries_zone_id": "<timeseries zone id>",
+       "timeseries_ingest_url": "<timeseries ingestion ur>l"
+     }
+   }
 ```
