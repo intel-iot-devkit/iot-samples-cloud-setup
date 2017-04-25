@@ -90,9 +90,7 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
      "m2x": {
        "api_key": "[M2X Primary API Key]",
        "device_id": "[M2X Device ID]",
-       "stream_id": "[M2X Stream ID]",
-       "timeseries_zone_id": "<timeseries zone id>",
-       "timeseries_ingest_url": "<timeseries ingestion ur>l"
+       "stream_id": "[M2X Stream ID]"
      }
    }
 ```
@@ -106,9 +104,7 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
      "m2x": {
        "api_key": "[M2X Primary API Key]",
        "device_id": "[M2X Device ID]",
-       "stream_id": "[M2X Stream ID]",
-       "timeseries_zone_id": "<timeseries zone id>",
-       "timeseries_ingest_url": "<timeseries ingestion ur>l"
+       "stream_id": "[M2X Stream ID]"
      }
    }
 ```
