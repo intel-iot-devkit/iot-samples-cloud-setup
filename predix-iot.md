@@ -20,6 +20,14 @@ Follow the installation instructions from the [Cloud Foundry Downloads](https://
 
 If you already have installed it, you can skip to the next step.
 
+## Install Maven\*
+
+Now, install the Maven\* Command Line Tool.
+
+https://docs.predix.io/en-US/content/platform/get_started/get_started_for_predix_developers/installing-the-maven-build-tool
+
+If you already have installed it, you can skip to the next step.
+
 ## Predix\* setup
 
 1. Clone the predix-scripts repository
