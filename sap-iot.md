@@ -27,7 +27,13 @@ You should now have all of the information you need to connect your device to th
 
 If you have followed all the steps above, you should have all the information that your program needs to connect to the SAP\* Cloud Platform Internet of Things:
 
-info goes here...
+`mms_endpoint` - The MMS endpoint for your account
+
+`device_id` - The device ID for the device you want to connect
+
+`message_type_id` - OutboundMessage Type ID
+
+`oauth_token` - OAuth token for the device
 
 ## Additional setup for C++
 
@@ -35,7 +41,7 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
-        info here...
+        export SAP_MMS_ENDPOINT="https://[hostname]/com.sap.iotservices.mms/v1/api/http/data"; export SAP_DEVICE_ID="[device_id]"; export SAP_MESSAGE_TYPE_ID="[message_type_id]"; export SAP_OAUTH_TOKEN="[oauth_token]"
 
 2. Click the **Apply** button to save these settings.
 3. Click the **Run** button to run the code on your board.
@@ -44,10 +50,28 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the REST interface, by setting the client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
 
-        goes here...
+```json
+   "services": {
+     "sap": {
+       "mms_endpoint": "https://[hostname]/com.sap.iotservices.mms/v1/api/http/data",
+       "device_id": "[device id]",
+       "message_type_id": "[OutboundMessage Type Id]",
+       "oauth_token": "[oauth token]"
+    }
+  }
+```
 
 ## Additional setup for Python\*
 
 When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the REST interface, by setting the client parameters. Add the following entries to the **config.json** file:
 
-       goes here...
+```json
+   "services": {
+     "sap": {
+       "mms_endpoint": "https://[hostname]/com.sap.iotservices.mms/v1/api/http/data",
+       "device_id": "<device id>",
+       "message_type_id": "[OutboundMessage Type Id]",
+       "oauth_token": "[oauth token]"
+    }
+  }
+```
