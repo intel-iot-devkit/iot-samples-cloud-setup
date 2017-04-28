@@ -93,7 +93,12 @@ If you have followed all the steps above, you should now have all the informatio
 
 ## Additional setup for C++
 
-When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you will need to use the WebSockets client interface by setting the correct parameters in Eclipse\*. To do that:
+When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you will need to install the "websocketspp" client libraries, add the "USE_PREDIX_SERVICE" symbol, and create and use a run configuration with the needed parameters.
+
+### Install the "websocketspp" client libraries
+
+To install the "websocketspp" client libraries, follow the instructions at:
+[https://github.com/intel-iot-devkit/iot-samples-cloud-setup/blob/master/cpp-mqtt.md](https://github.com/intel-iot-devkit/iot-samples-cloud-setup/blob/master/cpp-mqtt.md)
 
 ### Add the USE_PREDIX_SERVICE symbol
 
