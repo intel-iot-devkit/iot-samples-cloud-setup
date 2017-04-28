@@ -104,7 +104,7 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
 
 You can monitor the state of the Message Management Service application deployed in the Java Application Dashboard of your account for the SAP\* Cloud Platform cockpit.
 
-![](./images/sap/sap-http-access-log.png)
+![](./images/sap/sap-iotmms-dashboard.png)
 
 1. Login to your SAP Cloud Platform Cockpit at [https://account.hanatrial.ondemand.com](https://account.hanatrial.ondemand.com)
 
@@ -113,3 +113,5 @@ You can monitor the state of the Message Management Service application deployed
 3. Click on the name "iotmms" in the list of applications. This will open the "iotmms - Overview" page.
 
 4. Scroll down the page to the section labeled "Most Recent Logging". Click on the eyeglasses icon next to the "HTTP Access Logs" log you want to view, and the most recent data should be displayed in a new tab.
+
+![](./images/sap/sap-http-access-log.png)
