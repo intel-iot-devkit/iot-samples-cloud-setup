@@ -95,6 +95,21 @@ If you have followed all the steps above, you should now have all the informatio
 
 When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you will need to use the WebSockets client interface by setting the correct parameters in Eclipse\*. To do that:
 
+### Add the USE_PREDIX_SERVICE symbol
+
+1. From the main menu, select **Project > Properties** dialog box is displayed.
+![](./../../images/cpp/click-project-properties.png)
+2. Expand the section **C/C++ General**. <br>Click on the **Paths and Symbols** sub-section, and click on the **Symbols** tab.
+![](./../../images/cpp/click-gen-path-symbols.png)
+3. Now click on **GNU C++**, and click on the **Add** button.
+![](./../../images/cpp/click-gnupp-add.png)
+4. In the **Name** field, enter "USE_PREDIX_SERVICE". Leave the **Value** field blank.
+![](./../../images/cpp/add-name-and-var.png)
+5. Your new name symbol will now be displayed. Click **OK**.
+![](./../../images/cpp/name-var-ok.png)
+
+### Use a run configuration
+
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
       export PREDIX_UAA_CLIENT_ID="[uaa client id]"; export PREDIX_UAA_CLIENT_SECRET="[uaa client secret]"; export PREDIX_UAA_URL="[uaa url]"; export PREDIX_TIMESERIES_ZONE_ID="[timeseries zone id]"; export PREDIX_TIMESERIES_INGEST_URL="[timeseries ingest url]"
