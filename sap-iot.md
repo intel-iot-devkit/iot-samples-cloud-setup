@@ -45,13 +45,19 @@ Follow the instructions located at:
 
 If you have followed all the steps above, you should have all the information that your program needs to connect to the SAP\* Cloud Platform Internet of Things:
 
-`application_url` - The MMS endpoint application for your account. Located on the SAP Cloud Platform MMS Cockpit "Overview" page.
+![](./images/sap/sap-iotmms-dashboard.png)
+
+`application_url` - The MMS endpoint application for your account. Located on the Java Application Dashboard of your account for the SAP\* Cloud Platform cockpit.
+
+![](./images/sap/sap-device.png)
 
 `device_id` - The device ID for the device you want to connect. Located on the Internet of Things Service Cockpit "Devices" page.
 
-`message_type_id` - OutboundMessage Type ID. Located on the Internet of Things Service Cockpit "Message Types" page.
-
 `oauth_token` - OAuth token for the device. This is the generated Device Token from the original setup. You can regenerate the token if needed on the Internet of Things Service Cockpit "Devices" page, using the "Authentication" tab for the device.
+
+![](./images/sap/sap-message-type.png)
+
+`message_type_id` - OutboundMessage Type ID. Located on the Internet of Things Service Cockpit "Message Types" page.
 
 ## Additional setup for C++
 
@@ -96,7 +102,7 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
 
 ## Viewing data for debugging
 
-You can view data for debugging by using the SAP\* Cloud Platform MMS Cockpit "Logging" feature.
+You can monitor the state of the Message Management Service application deployed in the Java Application Dashboard of your account for the SAP\* Cloud Platform cockpit.
 
 ![](./images/sap/sap-http-access-log.png)
 
