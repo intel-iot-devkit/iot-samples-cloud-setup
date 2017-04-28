@@ -4,6 +4,8 @@ To get started using the SAP\* IoT Starter Kit, you must first setup your accoun
 
 ## SAP\* Cloud Platform Developer signup
 
+![](./images/sap/sap-signup.png)
+
 First, signup for an SAP Cloud Platform Developer account. If you already have an account, you can skip to the next step.
 
 Otherwise following the instructions at:
