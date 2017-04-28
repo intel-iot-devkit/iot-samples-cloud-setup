@@ -96,7 +96,7 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
 
 You can view data for debugging by using the SAP\* Cloud Platform MMS Cockpit "Logging" feature.
 
-![](../images/sap/sap-http-access-log.png)
+![](./images/sap/sap-http-access-log.png)
 
 1. Login to your SAP Cloud Platform Cockpit at [https://account.hanatrial.ondemand.com](https://account.hanatrial.ondemand.com)
 
