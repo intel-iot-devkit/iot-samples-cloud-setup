@@ -47,7 +47,7 @@ If you have followed all the steps above, you should have all the information th
 
 ![](./images/sap/sap-iotmms-dashboard.png)
 
-`application_url` - The MMS endpoint application for your account. Located on the Java Application Dashboard of your account for the SAP\* Cloud Platform cockpit.
+`application_url` - The MMS endpoint application for your account. Located on the Java\* Application Dashboard of your account for the SAP\* Cloud Platform cockpit.
 
 ![](./images/sap/sap-device.png)
 
