@@ -91,3 +91,19 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
     }
   }
 ```
+
+## Viewing data for debugging
+
+You can view data for debugging by using the SAP\* Cloud Platform MMS Cockpit "Logging" feature.
+
+1. Login to your SAP Cloud Platform Cockpit at [https://account.hanatrial.ondemand.com](https://account.hanatrial.ondemand.com)
+
+2. Click on "Internet of Things - Overview".
+
+3. Now click on the "Go to Service" link. This will open a new tab with the "Internet of Things Service Cockpit".
+
+4. Click on "MMS Cockpit" link. This will open a new tab with the "MMS Cockpit".
+
+5. Click on "Logging" under "Monitoring" dropdown. This will open the "Logging" page.
+
+6. Click on the eyeglasses icon next to the "HTTP Access Logs" log you want to view, and the most recent data should be displayed in a new tab.
