@@ -4,24 +4,40 @@ To get started using the SAP\* IoT Starter Kit, you must first setup your accoun
 
 ## SAP\* Cloud Platform Developer signup
 
-[Get SAP Cloud Platform Developer Account](https://github.com/SAP/iot-starterkit/src/prerequisites/account)
 First, signup for an SAP Cloud Platform Developer account. If you already have an account, you can skip to the next step.
+
+Otherwise following the instructions at:
+[https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/account](https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/account)
 
 ## SAP\* IoT setup
 
-1. [Enable Internet of Things](https://github.com/SAP/iot-starterkit/src/prerequisites/service)
+1. Login to SAP
+
+Login to your SAP Cloud Platform Cockpit at [https://account.hanatrial.ondemand.com](https://account.hanatrial.ondemand.com)
+
+2. Enable Internet of Things
+
 Next, enable the "Internet of Things" in your SAP Cloud Platform Cockpit.
 
-2. [Create Device Information in Internet of Things Cockpit](https://github.com/SAP/iot-starterkit/src/prerequisites/cockpit)
+Follow the instructions at:
+[https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/service](https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/service)
+
+3. Create Device Information in Internet of Things Cockpit
+
 To complete the needed prerequisites, you need to follow the following 3 steps:
    - Create a Message Type
    - Create a Device Type
    - Create a Device, and copy the generated Device Token. This is will be needed later to connect the Device.
 
-3. [Deploy the Message Management Service (MMS)](https://github.com/SAP/iot-starterkit/src/prerequisites/mms)
+Follow the instructions at:
+[https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/cockpit](https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/cockpit)
+
+3. Deploy the Message Management Service (MMS)
+
 Once the configuration is defined, the last step is to deploy the Message Management Service. Make sure that you perform role assignment of the `iotmms` application to your user account.
 
-You should now have all of the information you need to connect your device to the SAP\* Cloud Platform Internet of Things.
+Follow the instructions located at:
+[https://github.com/SAP/iot-starterkit/src/prerequisites/mms](https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/mms)
 
 ## Summary
 
