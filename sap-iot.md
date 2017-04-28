@@ -102,12 +102,8 @@ You can view data for debugging by using the SAP\* Cloud Platform MMS Cockpit "L
 
 1. Login to your SAP Cloud Platform Cockpit at [https://account.hanatrial.ondemand.com](https://account.hanatrial.ondemand.com)
 
-2. Click on "Internet of Things - Overview".
+2. Click on "Applications", then click on "Java Applications". This will display a new page with the list of Java applications.
 
-3. Now click on the "Go to Service" link. This will open a new tab with the "Internet of Things Service Cockpit".
+3. Click on the name "iotmms" in the list of applications. This will open the "iotmms - Overview" page.
 
-4. Click on "MMS Cockpit" link. This will open a new tab with the "MMS Cockpit".
-
-5. Click on "Logging" under "Monitoring" dropdown. This will open the "Logging" page.
-
-6. Click on the eyeglasses icon next to the "HTTP Access Logs" log you want to view, and the most recent data should be displayed in a new tab.
+4. Scroll down the page to the section labeled "Most Recent Logging". Click on the eyeglasses icon next to the "HTTP Access Logs" log you want to view, and the most recent data should be displayed in a new tab.
