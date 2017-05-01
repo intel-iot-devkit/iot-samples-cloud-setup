@@ -151,7 +151,7 @@ When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, y
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
-        export MQTT_SERVER="ssl://[hostname]:8883"; export MQTT_CLIENT_ID="[Your device ID]"; export MQTT_CERT="/home/root/.ssh/cert.pem"; export MQTT_CERT_KEY="/home/root/.ssh/privateKey.pem"; export MQTT_CA_ROOT="/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem"; export MQTT_TOPIC="devices/[Your device ID]"
+        export MQTT_SERVER="ssl://[hostname]:8883"; export MQTT_CLIENT_ID="[Your device ID]"; export MQTT_TOPIC="devices/[Your device ID]"; export MQTT_CERT="/home/root/.ssh/cert.pem"; export MQTT_CERT_KEY="/home/root/.ssh/privateKey.pem"; export MQTT_CA_ROOT="/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem"
 
 2. Click the **Apply** button to save these settings.
 3. Click the **Run** button to run the code on your board.
@@ -174,7 +174,7 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
 
 ## Additional setup for Python\*
 
-When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the MQTT interface by setting the client parameters. Add the following entries to the **config.json** file:
+When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the MQTT\* interface by setting the client parameters. Add the following entries to the **config.json** file:
 
 ```json
    "services": {
