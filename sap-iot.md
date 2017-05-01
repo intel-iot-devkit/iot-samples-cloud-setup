@@ -1,12 +1,12 @@
-# Connecting to SAP\* Cloud Platform Internet of Things
+# Connecting to SAP Cloud Platform\* Internet of Things
 
 To get started using the SAP\* IoT Starter Kit, you must first setup your account, by following the "Getting Started in the Cloud" steps listed at https://github.com/SAP/iot-starterkit#getting-started-in-the-cloud
 
-## SAP\* Cloud Platform Developer signup
+## SAP Cloud Platform\* Developer signup
 
 ![](./images/sap/sap-signup.png)
 
-First, signup for an SAP Cloud Platform Developer account. If you already have an account, you can skip to the next step.
+First, signup for an SAP Cloud Platform\* Developer account. If you already have an account, you can skip to the next step.
 
 Otherwise following the instructions at:
 [https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/account](https://github.com/SAP/iot-starterkit/tree/master/src/prerequisites/account)
@@ -43,7 +43,7 @@ Follow the instructions located at:
 
 ## Summary
 
-If you have followed all the steps above, you should have all the information that your program needs to connect to the SAP\* Cloud Platform Internet of Things:
+If you have followed all the steps above, you should have all the information that your program needs to connect to the SAP Cloud Platform Internet of Things:
 
 ![](./images/sap/sap-iotmms-dashboard.png)
 
@@ -102,7 +102,7 @@ When running your Python\* code on the Intel® Edison board or Intel® IoT Gatew
 
 ## Viewing data for debugging
 
-You can monitor the state of the Message Management Service application deployed in the Java Application Dashboard of your account for the SAP\* Cloud Platform cockpit.
+You can monitor the state of the Message Management Service application deployed in the Java Application Dashboard of your account for the SAP Cloud Platform cockpit.
 
 ![](./images/sap/sap-iotmms-dashboard.png)
 
