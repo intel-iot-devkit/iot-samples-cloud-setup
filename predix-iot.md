@@ -169,3 +169,23 @@ You can view data for debugging by using the Predix\* Tool Kit.
 4. Select "Latest Datapoints Request" from the "Choose Request" dropdown. Enter the "predix-zone-id" that you obtained when you created your Predix\* application. In the "Request Body" change the value "Compressor-2015:CompressionRatio" to "sensor-data".
 
 5. Click on the "Submit" button, and the most recent data should be displayed.
+
+## Deleting Your Sample App
+
+You can delete your sample Predix\* application using the following commands.
+
+First, obtain the name of your application's "space" by running:
+
+```
+cf spaces
+```
+
+Determine which space name you want to delete. Then run the following command:
+
+```
+cf delete-space [name]
+```
+
+where [name] should be replaced with the name of the space you want to delete.
+
+BE CAREFUL: deleting a space is permanent and your data cannot be recovered.
