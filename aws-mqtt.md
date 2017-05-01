@@ -133,37 +133,58 @@ We'll be using WinSCP* for the next steps. For installation instructions, refer 
 
 If you have followed all the steps above, you should have all the information that your program needs to connect to the MQTT* server:
 
-`MQTT_SERVER` -  use the **host** value you obtained by running the `aws iot describe-endpoint` command, along with the `ssl://` (for C++) or `mqtts://` protocol (for JavaScript*)
+`hostname` -  use the **host** value you obtained by running the `aws iot describe-endpoint` command, along with the `ssl://` (for C++) or `mqtts://` protocol (for JavaScript*)
 
-`MQTT_CLIENTID` - use `\<Your device name\>`
+`client_id` - use `[Your device name]`
 
-`MQTT_TOPIC` - use `devices/\<Your device name\>`
+`topic` - use `devices/[Your device name]`
 
-`MQTT_CERT` - use the filename of the device certificate as described above
+`cert` - use the filename of the device certificate as described above
 
-`MQTT_KEY` - use the filename of the device key as described above
+`key` - use the filename of the device key as described above
 
-`MQTT_CA` - use the filename of the CA certificate (`/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem`)
+`ca` - use the filename of the CA certificate (`/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem`)
 
 ## Additional setup for C++
 
-When running your C++ code on the Intel® Edison board, you need to set the MQTT\* client parameters in Eclipse\*. To do that:
+When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters in Intel® System Studio\*. To do that:
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
-        chmod 755 /tmp/<Your app name>; export MQTT_SERVER="ssl://<Your host name>:8883"; export MQTT_CLIENTID="<Your device ID>"; export MQTT_CERT="/home/root/.ssh/cert.pem"; export MQTT_KEY="/home/root/.ssh/privateKey.pem"; export MQTT_CA="/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem"; export MQTT_TOPIC="devices/<Your device ID>"
+        export MQTT_SERVER="ssl://[hostname]:8883"; export MQTT_CLIENT_ID="[Your device ID]"; export MQTT_CERT="/home/root/.ssh/cert.pem"; export MQTT_CERT_KEY="/home/root/.ssh/privateKey.pem"; export MQTT_CA_ROOT="/etc/ssl/certs/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem"; export MQTT_TOPIC="devices/[Your device ID]"
 
 2. Click the **Apply** button to save these settings.
 3. Click the **Run** button to run the code on your board.
 
 ## Additional setup for JavaScript*
 
-When running your JavaScript\* code on the Intel® Edison board, you need to set the MQTT\* client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
+When running your JavaScript\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the MQTT\* client parameters in the Intel® XDK IDE. Add the following entries to the **config.json** file:
 
-        {
-        "MQTT_SERVER": "mqtts://<Your host name>:8883",
-        "MQTT_CLIENTID": "<Your device ID>",
-        "MQTT_CERT": "/home/root/.ssh/cert.pem",
-        "MQTT_KEY": "/home/root/.ssh/privateKey.pem",
-        "MQTT_TOPIC": "devices/<Your device ID>"
-        }
+```json
+   "services": {
+     "mqtt": {
+       "hostname": "[your host name]",
+       "client_id": "[device id]",
+       "topic": "devices/[your device name]",
+       "cert": "[device certificate filename]",
+       "key": "[device key filename]"
+    }
+  }
+```
+
+## Additional setup for Python\*
+
+When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to use the MQTT interface by setting the client parameters. Add the following entries to the **config.json** file:
+
+```json
+   "services": {
+     "mqtt": {
+       "server": "[your host name]",
+       "port": "8883",
+       "client_id": "[device id]",
+       "topic": "devices/[your device name]",
+       "cert": "[device certificate filename]",
+       "key": "[device key filename]"
+    }
+  }
+```
