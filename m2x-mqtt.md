@@ -1,6 +1,6 @@
-# Connecting to AT&T M2X\* IoT using MQTT
+# Connecting to AT&T\* M2X\* IoT using MQTT\*
 
-## AT&T M2X\* IoT initial signup
+## AT&T\* M2X\* IoT initial signup
 
 1. Create an account on https://m2x.att.com, if you do not yet have one. If you already have an account, you can skip directly to "Adding your first device" below.
 ![](./images/att-m2x/m2x-signup.png)
@@ -8,7 +8,7 @@
 2. Fill out your information when signing up.
 ![](./images/att-m2x/signup-info.png)
 
-3. Verify your email address by clicking the link in the email recieved by AT&T. (Be sure to check your spam folder, the verification is requred to continue.)
+3. Verify your email address by clicking the link in the email recieved by AT&T\*. (Be sure to check your spam folder, the verification is requred to continue.)
 ![](./images/att-m2x/verify-email.png)
 
 ## Adding your first device
@@ -72,7 +72,7 @@ If you have followed all the required steps above, you should have all the infor
 
 ## Additional setup for C++
 
-When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X client parameters in Intel® System Studio\*. To do that:
+When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X client parameters in Intel® System Studio. To do that:
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
