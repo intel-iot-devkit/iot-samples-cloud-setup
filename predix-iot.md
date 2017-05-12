@@ -1,6 +1,6 @@
-# Connecting to GE\* Predix\* IoT
+# Connecting to Predix\* from GE IoT
 
-To get started using GE\* Predix\* IoT (https://www.predix.io/), you must first setup your development machine. These instructions follow the "Development machine configurations and step-by-step to building Predix Application and Services" steps listed at https://github.com/PredixDev/predix-scripts#development-machine-configurations-and-step-by-step-to-building-predix-application-and-services
+To get started using Predix\* from GE  IoT (https://www.predix.io/), you must first setup your development machine. These instructions follow the "Development machine configurations and step-by-step to building Predix Application and Services" steps listed at https://github.com/PredixDev/predix-scripts#development-machine-configurations-and-step-by-step-to-building-predix-application-and-services
 
 ## Register for a Predix\* account
 
