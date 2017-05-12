@@ -1,6 +1,6 @@
-# Connecting to AT&T\* M2X\* IoT using MQTT\*
+# Connecting to AT&T M2X\* IoT using MQTT
 
-## M2X IoT initial signup
+## AT&T M2X\* IoT initial signup
 
 1. Create an account on https://m2x.att.com, if you do not yet have one. If you already have an account, you can skip directly to "Adding your first device" below.
 ![](./images/att-m2x/m2x-signup.png)
@@ -62,7 +62,7 @@ When you now log into AT&T M2X platform you will now be able to view all of your
 
 ## Summary
 
-If you have followed all the required steps above, you should have all the information that your program needs to connect to the M2X\* server:
+If you have followed all the required steps above, you should have all the information that your program needs to connect to the M2X server:
 
 - `API_KEY` - set to `<M2X Primary API Key>`.
 
@@ -72,7 +72,7 @@ If you have followed all the required steps above, you should have all the infor
 
 ## Additional setup for C++
 
-When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X\* client parameters in Intel® System Studio\*. To do that:
+When running your C++ code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X client parameters in Intel® System Studio\*. To do that:
 
 1. Go to **Run configurations** and, in the **Commands to execute before application** field, type the following:
 
@@ -97,7 +97,7 @@ When running your JavaScript\* code on the Intel® Edison board or Intel® IoT G
 
 ## Additional setup for Python\*
 
-When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X\* client parameters on the board itself. Add the following entries to the **config.json** file:
+When running your Python\* code on the Intel® Edison board or Intel® IoT Gateway, you need to set the M2X client parameters on the board itself. Add the following entries to the **config.json** file:
 
 ```json
    "services": {
