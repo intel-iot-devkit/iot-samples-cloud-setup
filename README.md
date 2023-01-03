@@ -1,3 +1,7 @@
+# DISCONTINUATION OF PROJECT #
+This project will no longer be maintained by Intel.
+Intel has ceased development and contributions including, but not limited to, maintenance, bug fixes, new releases, or updates, to this project.
+Intel no longer accepts patches to this project.
 # Intel® how-to code samples cloud setup
 
 This repository contains the setup information needed to add IoT cloud support to the Intel® how-to code samples.
